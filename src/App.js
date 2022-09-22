@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import NoteLoader from "./components/NoteLoader";
+import AddPostButton from "./components/AddPostButton";
+import PostModal from "./components/PostModal";
+import {useState} from "react";
 
 function App() {
+    const [modalActive, setModalActive] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <div className="md:grid md:grid-cols-3 md:grid-rows-none w-3/4 mx-auto my-10 gap-6">
+            <AddPostButton modalState={setModalActive}></AddPostButton>
+            <NoteLoader></NoteLoader>
+        </div>
+          <PostModal modalActive={modalActive} setModalActive={setModalActive}></PostModal>
+      </div>
   );
 }
 
