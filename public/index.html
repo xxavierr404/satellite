@@ -10,34 +10,26 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Spacenote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/tailstyle.css">
+    <script src="%PUBLIC_URL%/js/particlesjs/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles-js', '%PUBLIC_URL%/js/particlesjs/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
   </head>
-  <body>
+  <body class="bg-black max-h-fit">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="mx-auto bg-white bg-opacity-5 rounded-md text-white w-fit px-5  text-center
+             lowercase tracking-widest font-light lg:text-6xl md:text-4xl sm:text-2xl mt-6
+              shadow-cyan-100 shadow-lg font-logo">Spacenote
+    </div>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="particles-js" class="top-0 left-0 fixed w-full h-full -z-30"></div>
   </body>
 </html>
