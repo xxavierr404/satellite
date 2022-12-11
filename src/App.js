@@ -13,7 +13,7 @@ function App() {
       <div>
         <div className="md:grid md:grid-cols-3 md:grid-rows-none w-3/4 mx-auto my-10
         gap-6 flex flex-col ">
-            <AddPostButton modalState={setModalActive}></AddPostButton>
+            <AddPostButton setModalState={setModalActive}></AddPostButton>
             {/*<NoteList setOpenedNote={setOpenedNote}></NoteList>*/}
         </div>
           {modalActive
