@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+    <meta charset="utf-8"/>
+    <link href="%PUBLIC_URL%/favicon.ico" rel="icon"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#000000" name="theme-color"/>
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+            content="Satellite"
+            name="description"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Spacenote</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="%PUBLIC_URL%/manifest.json" rel="manifest"/>
+    <title>Satellite</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/tailstyle.css">
+    <link href="%PUBLIC_URL%/tailstyle.css" rel="stylesheet" type="text/css">
+
     <script src="%PUBLIC_URL%/js/particlesjs/particles.min.js"></script>
     <script>
-      particlesJS.load('particles-js', '%PUBLIC_URL%/js/particlesjs/particles.json', function() {
-        console.log('callback - particles.js config loaded');
-      });
+        particlesJS.load('particles-js', '%PUBLIC_URL%/js/particlesjs/particles.json', function () {
+        });
     </script>
-  </head>
-  <body class="bg-black max-h-fit">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="mx-auto bg-white bg-opacity-5 rounded-md text-white w-fit px-5  text-center
-             lowercase tracking-widest font-light lg:text-6xl md:text-4xl sm:text-2xl mt-6
-              shadow-cyan-100 shadow-lg font-logo">Spacenote
-    </div>
-    <div id="root"></div>
-    <div id="particles-js" class="top-0 left-0 fixed w-full h-full -z-30"></div>
-  </body>
+</head>
+<body class="bg-black max-h-fit">
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div class="mx-auto bg-white bg-opacity-5 rounded-md text-white w-fit px-5 text-center
+             lowercase tracking-wide hover:tracking-widest transition-all ease-in-out duration-300
+              font-light lg:text-6xl md:text-4xl sm:text-2xl mt-6
+              shadow-cyan-100 shadow-xl font-logo select-none">
+    Satellite
+</div>
+<div id="root"></div>
+<div class="top-0 left-0 fixed w-full h-full -z-30" id="particles-js"></div>
+</body>
 </html>
