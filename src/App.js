@@ -7,20 +7,19 @@ import NoteMenu from "./components/UI/NoteMenu";
 
 function App() {
     const [modalActive, setModalActive] = useState(false);
-    const [openedNote, setOpenedNote] = useState(null);
 
   return (
       <div>
         <div className="md:grid md:grid-cols-3 md:grid-rows-none w-3/4 mx-auto my-10
         gap-6 flex flex-col ">
             <AddPostButton setModalState={setModalActive}></AddPostButton>
-            {/*<NoteList setOpenedNote={setOpenedNote}></NoteList>*/}
+            <NoteList></NoteList>
         </div>
           {modalActive
               ? <PostModal setModalActive={setModalActive}></PostModal>
               : null
           }}
-          <NoteMenu openedNote={openedNote} setOpenedNote={setOpenedNote}></NoteMenu>
+          {/*<NoteMenu></NoteMenu>*/}
       </div>
   );
 }

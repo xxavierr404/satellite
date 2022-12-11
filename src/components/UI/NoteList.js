@@ -7,8 +7,7 @@ function NoteList(props) {
     NoteFetcher.fetchNotes().then((json) => {
             let commentArray = Array.from(json.data);
             commentArray = commentArray.map((comment) => (
-                <Note content={comment.body} date={comment.postId} time={comment.id} key={comment.id}
-                      setOpenedNote={props.setOpenedNote}></Note>
+                <Note content={comment.body} date={comment.postId} time={comment.id} key={comment.id}></Note>
             ));
             setPosts(commentArray);
         }
