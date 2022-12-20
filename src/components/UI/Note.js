@@ -10,7 +10,7 @@ function Note(props) {
                 <div className="text-justify grow overflow-hidden">
                     {props.content}
                 </div>
-                <div className="flex-none text-right">Posted at: {props.date} {props.time}</div>
+                <div className="flex-none text-right">Исчезнет через {props.hoursLeft} часов</div>
             </div>
         </div>
     );
