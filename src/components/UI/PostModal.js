@@ -19,7 +19,7 @@ function PostModal(props) {
             <div className="md:w-2/6 h-2/3 m-auto bg-black outline-8 outline-white
              shadow-white shadow-lg rounded-2xl flex flex-col w-full p-5 gap-y-5"
             onClick={(e) => e.stopPropagation()}>
-                <textarea name="post" id="post" cols="15" rows="10" className="rounded-2xl bg-gray-800 text-white grow p-4"
+                <textarea name="post" id="post" cols="15" rows="10" className="rounded-2xl bg-gray-800 text-white grow p-4 resize-none"
                 placeholder="Текст новой записки будет здесь.">
                 </textarea>
                     <button className="uppercase bg-black ring-1 ring-white

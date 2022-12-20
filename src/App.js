@@ -2,25 +2,26 @@ import './App.css';
 import NoteList from "./components/UI/NoteList";
 import AddPostButton from "./components/UI/AddPostButton";
 import PostModal from "./components/UI/PostModal";
-import {useState} from "react";
+import {useRef, useState} from "react";
 import NoteMenu from "./components/UI/NoteMenu";
 
 function App() {
     const [modalActive, setModalActive] = useState(false);
-    const [openedNote, setOpenedNote] = useState(null);
+    const scrollLoader = useRef();
 
   return (
       <div>
         <div className="md:grid md:grid-cols-3 md:grid-rows-none w-3/4 mx-auto my-10
-        gap-6 flex flex-col ">
+        gap-6 flex flex-col overflow-hidden p-5">
             <AddPostButton setModalState={setModalActive}></AddPostButton>
-            {/*<NoteList setOpenedNote={setOpenedNote}></NoteList>*/}
+            <NoteList loader={scrollLoader}></NoteList>
+            <div ref={scrollLoader}></div>
         </div>
           {modalActive
               ? <PostModal setModalActive={setModalActive}></PostModal>
               : null
           }}
-          <NoteMenu openedNote={openedNote} setOpenedNote={setOpenedNote}></NoteMenu>
+          {/*<NoteMenu></NoteMenu>*/}
       </div>
   );
 }
